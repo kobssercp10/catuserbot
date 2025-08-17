@@ -15,7 +15,7 @@ from googletrans import LANGUAGES
 from ..Config import Config
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers.functions import getTranslate
-from ..sql_helper.globals import gvarstatus
+from ..mongo.globals import gvarstatus
 from . import Convert, catub, soft_deEmojify
 
 plugin_category = "utils"

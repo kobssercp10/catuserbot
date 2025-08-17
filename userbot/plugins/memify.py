@@ -32,7 +32,7 @@ from ..helpers.functions import (
     solarize,
 )
 from ..helpers.utils import reply_id
-from ..sql_helper.globals import addgvar, gvarstatus
+from ..mongo.globals import addgvar, gvarstatus
 
 plugin_category = "fun"
 

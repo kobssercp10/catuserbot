@@ -39,7 +39,7 @@ from userbot import Convert, catub
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers.functions import crop_and_divide
 from ..helpers.tools import media_type, meme_type
-from ..sql_helper.globals import gvarstatus
+from ..mongo.globals import gvarstatus
 
 plugin_category = "fun"
 

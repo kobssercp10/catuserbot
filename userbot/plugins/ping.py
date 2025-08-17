@@ -22,7 +22,7 @@ from telethon.errors.rpcerrorlist import (
 from ..Config import Config
 from ..core.managers import edit_or_reply
 from ..helpers.functions import get_readable_time
-from ..sql_helper.globals import gvarstatus
+from ..mongo.globals import gvarstatus
 from . import StartTime, catub, mention, reply_id
 
 plugin_category = "tools"

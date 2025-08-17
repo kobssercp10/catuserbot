@@ -26,7 +26,7 @@ from telethon.tl.functions.contacts import UnblockRequest as unblock
 
 from ...Config import Config
 from ...core.logger import logging
-from ...sql_helper.globals import gvarstatus
+from ...mongo.globals import gvarstatus
 from ..resources.states import states
 
 LOGS = logging.getLogger(__name__)

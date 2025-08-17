@@ -20,7 +20,7 @@ from ..sql_helper.global_collection import (
     del_keyword_collectionlist,
     get_collectionlist_items,
 )
-from ..sql_helper.globals import addgvar, delgvar, gvarstatus
+from ..mongo.globals import addgvar, delgvar, gvarstatus
 from . import BOTLOG, BOTLOG_CHATID, HEROKU_APP
 
 LOGS = logging.getLogger(__name__)

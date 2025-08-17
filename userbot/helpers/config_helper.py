@@ -14,7 +14,7 @@ from validators.url import url
 from userbot import BOTLOG_CHATID
 
 from ..Config import Config
-from ..sql_helper.globals import addgvar, delgvar, gvarstatus
+from ..mongo.globals import addgvar, delgvar, gvarstatus
 
 plugin_category = "tools"
 

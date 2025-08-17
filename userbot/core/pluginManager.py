@@ -15,7 +15,7 @@ import sys
 from telethon import TelegramClient
 
 from ..core.logger import logging
-from ..sql_helper.global_collection import (
+from ..mongo.global_collection import (
     add_to_collectionlist,
     del_keyword_collectionlist,
     get_collectionlist_items,

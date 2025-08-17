@@ -13,7 +13,7 @@ from userbot import catub
 
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers.functions.functions import getTranslate
-from ..sql_helper.globals import addgvar, gvarstatus
+from ..mongo.globals import addgvar, gvarstatus
 from . import BOTLOG, BOTLOG_CHATID, soft_deEmojify
 
 plugin_category = "utils"

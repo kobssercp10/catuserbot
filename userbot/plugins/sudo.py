@@ -22,7 +22,7 @@ from ..core.managers import edit_delete, edit_or_reply
 from ..helpers.utils import get_user_from_event, mentionuser
 from ..sql_helper import global_collectionjson as sql
 from ..sql_helper import global_list as sqllist
-from ..sql_helper.globals import addgvar, delgvar, gvarstatus
+from ..mongo.globals import addgvar, delgvar, gvarstatus
 
 plugin_category = "tools"
 

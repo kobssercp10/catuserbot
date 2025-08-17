@@ -12,7 +12,7 @@ import asyncio
 from telethon.errors import FloodWaitError, MessageNotModifiedError
 
 from ..Config import Config
-from ..sql_helper.globals import gvarstatus
+from ..mongo.globals import gvarstatus
 from .data import _vcusers_list
 
 

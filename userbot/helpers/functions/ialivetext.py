@@ -25,16 +25,14 @@ def check_data_base_heal_th():
     # https://stackoverflow.com/a/41961968
     is_database_working = False
     output = "No Database is set"
-    if not Config.DB_URI:
+    if not Config.MONGO_DB_URI:
         return is_database_working, output
-    from ...sql_helper import SESSION
+    from ...mongo import DB, run_sync
 
     try:
-        # to check database we will execute raw query
-        SESSION.execute("SELECT 1")
+        run_sync(DB.command("ping"))
     except Exception as e:
         output = f"❌ {e}"
-        is_database_working = False
     else:
         output = "Functioning"
         is_database_working = True

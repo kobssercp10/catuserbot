@@ -62,37 +62,13 @@ The bot will send token after that.
 
 </details>
 
-### 〣 `DB_URI`
+### 〣 `MONGO_DB_URI`
 
-{% tabs %}
-{% tab title="Local Database" %}
-{% code title="First install postgres" overflow="wrap" %}
-```batch
-sudo apt install postgresql postgresql-contrib
+Provide a MongoDB connection URI. The database name will be extracted from the URI. Example:
+
+```bash
+mongodb://localhost:27017/catuserbot
 ```
-{% endcode %}
-
-{% code title="Then run this in terminal" overflow="wrap" %}
-```batch
-sudo su - postgres bash -c "psql -c \"ALTER USER postgres WITH PASSWORD 'your_password';\" && createdb catuserbot -O postgres"
-```
-{% endcode %}
-
-{% code title="Your DB_URI will be" overflow="wrap" %}
-```batch
-postgresql://postgres:your_password@localhost:5432/catuserbot
-```
-{% endcode %}
-{% endtab %}
-
-{% tab title="Elephant Sql" %}
-**Visit** [**https://www.elephantsql.com/**](https://www.elephantsql.com/) **and get your DB\_URI**
-
-{% embed url="https://youtu.be/zlPCUzocwHw" %}
-Elephant SQL
-{% endembed %}
-{% endtab %}
-{% endtabs %}
 
 ## ≡ Extra Plugins Related Variables
 

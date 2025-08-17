@@ -14,7 +14,7 @@ from telethon.tl import functions
 from telethon.tl.functions.users import GetFullUserRequest
 
 from ..Config import Config
-from ..sql_helper.globals import gvarstatus
+from ..mongo.globals import gvarstatus
 from . import ALIVE_NAME, BOTLOG, BOTLOG_CHATID, catub, edit_delete, get_user_from_event
 
 plugin_category = "utils"

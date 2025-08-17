@@ -9,8 +9,8 @@
 
 import contextlib
 
-from ..sql_helper.global_collectionjson import get_collection
-from ..sql_helper.global_list import get_collection_list
+from ..mongo.global_collectionjson import get_collection
+from ..mongo.global_list import get_collection_list
 
 
 def _sudousers_list():

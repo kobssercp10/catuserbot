@@ -12,7 +12,7 @@ from somnium import Somnium
 
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers import GetStylesGraph, ThabAi, reply_id
-from ..sql_helper.globals import addgvar, gvarstatus
+from ..mongo.globals import addgvar, gvarstatus
 from . import catub, mention
 
 catai = ThabAi()

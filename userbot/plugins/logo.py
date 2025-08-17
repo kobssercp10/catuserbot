@@ -22,7 +22,7 @@ from userbot import Convert, catub
 
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers.functions import clippy
-from ..sql_helper.globals import addgvar, delgvar, gvarstatus
+from ..mongo.globals import addgvar, delgvar, gvarstatus
 from . import hmention, reply_id
 
 # ======================================================================================================================================================================================

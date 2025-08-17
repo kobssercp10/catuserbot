@@ -17,7 +17,7 @@ from ..core.managers import edit_delete
 from ..helpers.tools import media_type
 from ..helpers.utils import _format
 from ..sql_helper import no_log_pms_sql
-from ..sql_helper.globals import addgvar, gvarstatus
+from ..mongo.globals import addgvar, gvarstatus
 from . import BOTLOG, BOTLOG_CHATID
 
 LOGS = logging.getLogger(__name__)
