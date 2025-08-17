@@ -7,11 +7,7 @@
 # Please see: https://github.com/TgCatUB/catuserbot/blob/master/LICENSE
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
-import os
-
-from sqlalchemy import create_engine
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import scoped_session, sessionmaker
+from motor.motor_asyncio import AsyncIOMotorClient
 
 # the secret configuration specific things
 from ..Config import Config
@@ -20,24 +16,16 @@ from ..core.logger import logging
 LOGS = logging.getLogger(__name__)
 
 
-def start() -> scoped_session:
-    database_url = (
-        Config.DB_URI.replace("postgres:", "postgresql:")
-        if "postgres://" in Config.DB_URI
-        else Config.DB_URI
-    )
-    engine = create_engine(database_url)
-    BASE.metadata.bind = engine
-    BASE.metadata.create_all(engine)
-    return scoped_session(sessionmaker(bind=engine, autoflush=False))
-
+MONGO_DB_URI = getattr(Config, "MONGO_DB_URI", None) or Config.DB_URI
+MONGO_DB_NAME = getattr(Config, "MONGO_DB_NAME", "catuserbot")
 
 try:
-    BASE = declarative_base()
-    SESSION = start()
-except AttributeError as e:
-    # this is a dirty way for the work-around required for #23
+    MONGO_CLIENT = AsyncIOMotorClient(MONGO_DB_URI)
+    MONGO_DB = MONGO_CLIENT[MONGO_DB_NAME]
+except Exception as e:  # pragma: no cover - connection errors handled at runtime
     LOGS.error(
-        "DB_URI is not configured. Features depending on the database might have issues."
+        "MongoDB connection failed. Features depending on the database might have issues."
     )
     LOGS.error(str(e))
+    MONGO_CLIENT = None
+    MONGO_DB = None
