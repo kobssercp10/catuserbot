@@ -28,7 +28,7 @@ from ..core.managers import edit_delete, edit_or_reply
 from ..helpers.google_tools import chromeDriver
 from ..helpers.tools import media_type
 from ..helpers.utils import pastetext, reply_id
-from ..sql_helper.globals import addgvar, gvarstatus
+from ..mongo.globals import addgvar, gvarstatus
 from . import hmention
 
 plugin_category = "utils"

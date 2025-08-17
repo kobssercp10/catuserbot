@@ -17,7 +17,7 @@ from fake_useragent import UserAgent
 from userbot.Config import Config
 from userbot.core.managers import edit_delete, edit_or_reply
 from userbot.helpers.functions import format_image, wall_download
-from userbot.sql_helper.globals import gvarstatus
+from userbot.mongo.globals import gvarstatus
 
 openai.api_key = Config.OPENAI_API_KEY
 conversations = {}

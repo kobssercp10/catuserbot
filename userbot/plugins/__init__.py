@@ -24,7 +24,7 @@ from ..core.managers import edit_delete, edit_or_reply
 from ..core.session import catub
 from ..helpers import *
 from ..helpers.utils import _catutils, _format, install_pip, reply_id
-from ..sql_helper.globals import gvarstatus
+from ..mongo.globals import gvarstatus
 
 # =================== CONSTANT ===================
 bot = catub

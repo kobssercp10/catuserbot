@@ -19,7 +19,7 @@ from telethon.tl.types import (
 )
 
 from ..Config import Config
-from ..sql_helper.globals import gvarstatus
+from ..mongo.globals import gvarstatus
 from .managers import edit_or_reply
 
 

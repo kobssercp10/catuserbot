@@ -24,7 +24,7 @@ from ..helpers.utils import _format, get_user_from_event, reply_id
 from ..sql_helper import global_collectionjson as sql
 from ..sql_helper import global_list as sqllist
 from ..sql_helper import pmpermit_sql
-from ..sql_helper.globals import addgvar, delgvar, gvarstatus
+from ..mongo.globals import addgvar, delgvar, gvarstatus
 from . import BOTLOG_CHATID, mention
 
 plugin_category = "utils"

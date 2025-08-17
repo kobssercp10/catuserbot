@@ -33,7 +33,7 @@ from ..sql_helper.global_list import (
     is_in_list,
     rm_from_list,
 )
-from ..sql_helper.globals import addgvar, delgvar, gvarstatus
+from ..mongo.globals import addgvar, delgvar, gvarstatus
 from . import BOTLOG, BOTLOG_CHATID, _catutils, catub, edit_delete, logging
 
 plugin_category = "tools"

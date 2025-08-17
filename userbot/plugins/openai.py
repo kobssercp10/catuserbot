@@ -20,7 +20,7 @@ from ..helpers.chatbot import (
     generate_gpt_response,
 )
 from ..helpers.utils import reply_id
-from ..sql_helper.globals import addgvar, delgvar, gvarstatus
+from ..mongo.globals import addgvar, delgvar, gvarstatus
 
 plugin_category = "tools"
 

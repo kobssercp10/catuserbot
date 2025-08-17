@@ -20,7 +20,7 @@ from pytz import timezone as tz
 
 from ..Config import Config
 from ..helpers.utils import _format
-from ..sql_helper.globals import addgvar, gvarstatus
+from ..mongo.globals import addgvar, gvarstatus
 from . import catub, edit_or_reply, logging, reply_id
 
 plugin_category = "utils"

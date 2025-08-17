@@ -13,7 +13,7 @@ from userbot import BOTLOG_CHATID, catub
 from userbot.core.logger import logging
 
 from ..core.managers import edit_delete, edit_or_reply
-from ..sql_helper.globals import addgvar, delgvar, gvarstatus
+from ..mongo.globals import addgvar, delgvar, gvarstatus
 
 plugin_category = "tools"
 LOGS = logging.getLogger(__name__)

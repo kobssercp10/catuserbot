@@ -18,7 +18,7 @@ from userbot import catub
 
 from ..Config import Config
 from ..core.logger import logging
-from ..sql_helper.globals import gvarstatus
+from ..mongo.globals import gvarstatus
 from . import BOTLOG, BOTLOG_CHATID, edit_or_reply
 
 LOGS = logging.getLogger(__name__)
